@@ -1,18 +1,18 @@
 CC=g++
-BINDIR=.
-SRCDIR=.
-OBJDIR=.
+BINDIR=./bin
+SRCDIR=./src
+OBJDIR=./obj
 
 DEPS=$(OBJDIR)/LZW_Decompressor.o $(OBJDIR)/File_Loader.o
 
 $(BINDIR)/LZW: $(DEPS) $(SRCDIR)/LZW.cpp
 	$(CC) -o $@ $^
 
-$(OBJDIR)/LZW_Decompressor.o: $(SRCDIR)/LZW_Decompressor.cpp $(SRCDIR)/LZW_Decompressor.h
-	$(CC) -c $<
+$(OBJDIR)/LZW_Decompressor.o: $(SRCDIR)/LZW_Decompressor.cpp
+	$(CC) -c $^ -o  $@
 
-$(OBJDIR)/File_Load.o: $(SRCDIR)/File_Loader.cpp $(SRCDIR)/File_Loader.h
-	$(CC) -c $<
+$(OBJDIR)/File_Loader.o: $(SRCDIR)/File_Loader.cpp
+	$(CC) -c $^ -o $@
 
 clean:
-	rm -f $(OBJDIR)/*.o core
+	rm -f $(OBJDIR)/*.o core && make

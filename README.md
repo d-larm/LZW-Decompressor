@@ -7,7 +7,7 @@
 
 ```sh
 $ make
-$ ./LZW <input_path_1> <input_path_2> ...
+$ ./bin/LZW <input_path_1> <input_path_2> ...
 ```
 
   - Can decompress any number of files at once
@@ -18,6 +18,7 @@ $ ./LZW <input_path_1> <input_path_2> ...
 
 ```sh
 $ make clean
-$ make
-$ ./LZW <input_path_1> <input_path_2> ...
+$ ./bin/LZW <input_path_1> <input_path_2> ...
 ```
+
+  - Cleans the project object files for a fresh build
