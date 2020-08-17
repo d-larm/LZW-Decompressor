@@ -14,7 +14,8 @@ int main(int argc, char** argv) {
             
         }else {
             
-            std::cout << "Could not decompress the file located at " << argv[i] << std::endl; 
+            std::cout << "Could not decompress the file located at " << argv[i] << std::endl;
+            std::cout << "\n=============================================================" << std::endl;
         }
     }
 }
